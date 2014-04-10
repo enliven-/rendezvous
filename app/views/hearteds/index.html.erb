@@ -1,0 +1,39 @@
+<h1>Listing hearteds</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Userx</th>
+      <th>Usery</th>
+      <th>Matched</th>
+      <th>Userx heart time</th>
+      <th>Usery heart time</th>
+      <th>Match time</th>
+      <th>Notification time</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @hearteds.each do |hearted| %>
+      <tr>
+        <td><%= hearted.userx_id %></td>
+        <td><%= hearted.usery_id %></td>
+        <td><%= hearted.matched %></td>
+        <td><%= hearted.userx_heart_time %></td>
+        <td><%= hearted.usery_heart_time %></td>
+        <td><%= hearted.match_time %></td>
+        <td><%= hearted.notification_time %></td>
+        <td><%= link_to 'Show', hearted %></td>
+        <td><%= link_to 'Edit', edit_hearted_path(hearted) %></td>
+        <td><%= link_to 'Destroy', hearted, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Hearted', new_hearted_path %>

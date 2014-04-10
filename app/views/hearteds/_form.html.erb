@@ -1,0 +1,45 @@
+<%= form_for(@hearted) do |f| %>
+  <% if @hearted.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@hearted.errors.count, "error") %> prohibited this hearted from being saved:</h2>
+
+      <ul>
+      <% @hearted.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :userx_id %><br>
+    <%= f.number_field :userx_id %>
+  </div>
+  <div class="field">
+    <%= f.label :usery_id %><br>
+    <%= f.number_field :usery_id %>
+  </div>
+  <div class="field">
+    <%= f.label :matched %><br>
+    <%= f.check_box :matched %>
+  </div>
+  <div class="field">
+    <%= f.label :userx_heart_time %><br>
+    <%= f.datetime_select :userx_heart_time %>
+  </div>
+  <div class="field">
+    <%= f.label :usery_heart_time %><br>
+    <%= f.datetime_select :usery_heart_time %>
+  </div>
+  <div class="field">
+    <%= f.label :match_time %><br>
+    <%= f.datetime_select :match_time %>
+  </div>
+  <div class="field">
+    <%= f.label :notification_time %><br>
+    <%= f.datetime_select :notification_time %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

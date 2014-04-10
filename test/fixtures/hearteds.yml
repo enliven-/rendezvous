@@ -1,0 +1,19 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  userx_id: 1
+  usery_id: 1
+  matched: false
+  userx_heart_time: 2014-04-10 22:54:23
+  usery_heart_time: 2014-04-10 22:54:23
+  match_time: 2014-04-10 22:54:23
+  notification_time: 2014-04-10 22:54:23
+
+two:
+  userx_id: 1
+  usery_id: 1
+  matched: false
+  userx_heart_time: 2014-04-10 22:54:23
+  usery_heart_time: 2014-04-10 22:54:23
+  match_time: 2014-04-10 22:54:23
+  notification_time: 2014-04-10 22:54:23

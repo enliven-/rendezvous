@@ -1,4 +1,6 @@
 Rendezvous::Application.routes.draw do
+  resources :hearteds
+
   resources :ratings
 
   # The priority is based upon order of creation: first created -> highest priority.

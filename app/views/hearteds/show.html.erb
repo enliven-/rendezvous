@@ -1,0 +1,39 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Userx:</strong>
+  <%= @hearted.userx_id %>
+</p>
+
+<p>
+  <strong>Usery:</strong>
+  <%= @hearted.usery_id %>
+</p>
+
+<p>
+  <strong>Matched:</strong>
+  <%= @hearted.matched %>
+</p>
+
+<p>
+  <strong>Userx heart time:</strong>
+  <%= @hearted.userx_heart_time %>
+</p>
+
+<p>
+  <strong>Usery heart time:</strong>
+  <%= @hearted.usery_heart_time %>
+</p>
+
+<p>
+  <strong>Match time:</strong>
+  <%= @hearted.match_time %>
+</p>
+
+<p>
+  <strong>Notification time:</strong>
+  <%= @hearted.notification_time %>
+</p>
+
+<%= link_to 'Edit', edit_hearted_path(@hearted) %> |
+<%= link_to 'Back', hearteds_path %>
