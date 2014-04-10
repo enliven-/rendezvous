@@ -1,0 +1,31 @@
+<h1>Listing answered_questions</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Question</th>
+      <th>Answer</th>
+      <th>User</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @answered_questions.each do |answered_question| %>
+      <tr>
+        <td><%= answered_question.question_id %></td>
+        <td><%= answered_question.answer_id %></td>
+        <td><%= answered_question.user_id %></td>
+        <td><%= link_to 'Show', answered_question %></td>
+        <td><%= link_to 'Edit', edit_answered_question_path(answered_question) %></td>
+        <td><%= link_to 'Destroy', answered_question, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Answered question', new_answered_question_path %>

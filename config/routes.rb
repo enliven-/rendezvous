@@ -1,4 +1,6 @@
 Rendezvous::Application.routes.draw do
+  resources :answered_questions
+
   resources :personality_categories
 
   resources :interests
