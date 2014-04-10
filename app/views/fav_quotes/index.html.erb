@@ -1,0 +1,31 @@
+<h1>Listing fav_quotes</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Text</th>
+      <th>User</th>
+      <th>Source</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @fav_quotes.each do |fav_quote| %>
+      <tr>
+        <td><%= fav_quote.text %></td>
+        <td><%= fav_quote.user_id %></td>
+        <td><%= fav_quote.source %></td>
+        <td><%= link_to 'Show', fav_quote %></td>
+        <td><%= link_to 'Edit', edit_fav_quote_path(fav_quote) %></td>
+        <td><%= link_to 'Destroy', fav_quote, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Fav quote', new_fav_quote_path %>

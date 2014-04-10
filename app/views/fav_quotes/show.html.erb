@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Text:</strong>
+  <%= @fav_quote.text %>
+</p>
+
+<p>
+  <strong>User:</strong>
+  <%= @fav_quote.user_id %>
+</p>
+
+<p>
+  <strong>Source:</strong>
+  <%= @fav_quote.source %>
+</p>
+
+<%= link_to 'Edit', edit_fav_quote_path(@fav_quote) %> |
+<%= link_to 'Back', fav_quotes_path %>
