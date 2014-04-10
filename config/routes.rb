@@ -1,4 +1,6 @@
 Rendezvous::Application.routes.draw do
+  resources :questions
+
   resources :hearteds
 
   resources :ratings
