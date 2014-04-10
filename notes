@@ -1,0 +1,71 @@
+
+! - exactly one
+? - zero or one
+* - zero or more
++ - one or more
+
+
+user
+  ! profile
+  ! login - fbauth
+  ! fbprofile
+  * hearted
+
+hearted
+  ! id
+  ! user1_id
+  ! user1_heart_time
+  ! user2_id
+  ! user2_heart_time
+  ! complete - true / false
+  ! match_time
+  ! notification_time
+
+profile
+  ! id
+  * interest
+  * fav-quote
+  * profile-question
+  ! self-rating
+  * rating-by-you
+  * rating-for-you
+
+
+interest
+  ! id
+  ! label
+  + pic
+
+
+fav-quote
+  ! id
+  ! quote_text :: text
+
+
+rating
+  ! personality_category_id
+  ! rater_id
+  ! rated_id
+  ! score (1-7)
+
+
+question
+  ! id
+  ! question_body :: text
+
+
+answer
+  ! id
+  ! ques_id
+  ! user_id
+
+
+profile-question
+  ! id
+  ! question_id
+  ! answer_id
+
+personality-category
+  ! id
+  ! label
+  
