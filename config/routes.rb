@@ -1,4 +1,6 @@
 Rendezvous::Application.routes.draw do
+  resources :personality_categories
+
   resources :interests
 
   resources :fav_quotes
